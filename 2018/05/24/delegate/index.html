@@ -15,7 +15,7 @@
     <meta name="description" content="">
     <meta name="Cache-Control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>Hello World · I‘m Loki</title>
+    <title>I‘m Loki</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -181,7 +181,7 @@
                 <a href="/" >I‘m Loki</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name">Hello World</a>
+                <a href="#" class="post-name"></a>
             </div>
     </div>
     
@@ -213,7 +213,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            Hello World
+            [Untitled Post]
             <!-- 404 -->
             
         </h1>
@@ -231,7 +231,7 @@ height:50vh;
             
             <div class="post-intro-meta">
                 <span class="post-intro-calander iconfont-archer">&#xe676;</span>
-                <span class="post-intro-time">2018/04/30</span>
+                <span class="post-intro-time">2018/05/24</span>
                 
                 <span id="busuanzi_container_page_pv" class="busuanzi-pv">
                     <span class="iconfont-archer">&#xe602;</span>
@@ -337,15 +337,28 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="noopener">Writing</a></p>
-<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="noopener">Server</a></p>
-<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo generate</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="noopener">Generating</a></p>
-<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo deploy</span><br></pre></td></tr></table></figure>
-<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="noopener">Deployment</a></p>
+        <hr>
+<p>title: 事件委托方法及区别<br>date: 2018-05-24 09:26:53<br>tags: jQuery JavaScript</p>
+<h2 id="category-jQuery"><a href="#category-jQuery" class="headerlink" title="category: jQuery  "></a>category: jQuery  </h2><h2 id="一、-什么是事件委托："><a href="#一、-什么是事件委托：" class="headerlink" title="一、    什么是事件委托："></a>一、    什么是事件委托：</h2><p>事件委托，就是给父元素绑定事件监听，通过委托可以让底下的子元素都绑定上相应的事件。它的原理就是通过事件冒泡，利用父级去触发子级的事件。</p>
+<p>为什么要进行事件委托呢？<br>一般我们哪个元素需要事件，就绑定在哪个元素上，例如一个ul上的li，所有的li都需要绑定事件，当然不可能挨个给li绑定事件了，这个时候就需要事件委托了，将事件监听委托给父元素ul，监听指定的子元素li，匹配则触发事件</p>
+<h2 id="二、jQuery的事件委托on、live、delegate及区别"><a href="#二、jQuery的事件委托on、live、delegate及区别" class="headerlink" title="二、jQuery的事件委托on、live、delegate及区别"></a>二、jQuery的事件委托on、live、delegate及区别</h2><h3 id="1、on（推荐）"><a href="#1、on（推荐）" class="headerlink" title="1、on（推荐）"></a>1、on（推荐）</h3><p>语法：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'父元素'</span>).on(<span class="string">'事件名称'</span>,<span class="string">'需要绑定事件的子元素'</span>,<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">	函数体;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<h3 id="2、delegate"><a href="#2、delegate" class="headerlink" title="2、delegate"></a>2、delegate</h3><p>语法：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'父元素'</span>).delegate (<span class="string">'需要绑定事件的子元素'</span>,<span class="string">'事件名称'</span>, <span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">	函数体;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">等价于：$(<span class="string">'父元素'</span>).on( <span class="string">'事件名称'</span>,<span class="string">'子元素'</span>,<span class="function"><span class="title">function</span></span>()&#123;&#125; );</span><br></pre></td></tr></table></figure></p>
+<p>和on的区别只是语法上参数一二刚好相反吧</p>
+<h3 id="3、live"><a href="#3、live" class="headerlink" title="3、live"></a>3、live</h3><p>语法：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'选择器'</span>).live(<span class="string">'事件名称'</span>, <span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">	函数体;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
+<p>这是一种把事件绑定在$(document)元素上，当触发事件时，通过DOM树，找到需要绑定事件的元素，因此，在DOM嵌套层级较深时，会造成资源损耗。</p>
+<p>所以live方法在1.7中已经不建议使用，在1.9中更是废除了这个方法，所以还是推荐使用on。</p>
+<h3 id="4、bind（当然这个只是事件绑定）"><a href="#4、bind（当然这个只是事件绑定）" class="headerlink" title="4、bind（当然这个只是事件绑定）"></a>4、bind（当然这个只是事件绑定）</h3><p>语法：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'选择器'</span>).<span class="built_in">bind</span>( <span class="string">'事件名称'</span>, <span class="function"><span class="title">function</span></span>() &#123;&#125; );</span><br><span class="line"></span><br><span class="line">等价于：$(<span class="string">'选择器'</span>).on( <span class="string">'事件名称'</span>, <span class="function"><span class="title">function</span></span>() &#123;&#125; );</span><br></pre></td></tr></table></figure></p>
+<p>bind只能给现有的元素添加事件，之后添加的就不会被绑定上事件。</p>
+<p>和bind一样，on、delegate 、live都可以同时绑定多个事件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'选择器'</span>).on(<span class="string">'事件1 事件2 ...'</span>,<span class="function"><span class="title">function</span></span>()&#123;&#125;);</span><br></pre></td></tr></table></figure>
+<p>或绑定不同事件处理程序</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'选择器'</span>).on(&#123;</span><br><span class="line">    事件1:<span class="function"><span class="title">function</span></span>()&#123;&#125;,</span><br><span class="line">    事件2:<span class="function"><span class="title">function</span></span>()&#123;&#125;,</span><br><span class="line">            ...  </span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>所有，综上所述，on果然是万能的，撒花✿✿ヽ(°▽°)ノ✿</p>
+<h2 id="三、原生js的事件委托"><a href="#三、原生js的事件委托" class="headerlink" title="三、原生js的事件委托"></a>三、原生js的事件委托</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">&lt;ul id=<span class="string">"myul"</span>&gt;</span><br><span class="line">    &lt;li&gt;&lt;a href=<span class="string">"#"</span>&gt;111&lt;/a&gt;&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var ul=document.getElementById(<span class="string">'myul'</span>);</span><br><span class="line"></span><br><span class="line">//当中匿名函数的参数e用来接收event对象,通过target获取事件源</span><br><span class="line">ul.addEventListener(<span class="string">'click'</span>,<span class="keyword">function</span>(e)&#123;</span><br><span class="line">	console.log(e.target);</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure>
+<p>刚好手边看到一个实例来放松一下：</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">有一段html结构如下：</span><br><span class="line">&lt;ul id=<span class="string">"myul"</span>&gt;</span><br><span class="line">    &lt;li&gt;111&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;222&lt;/li&gt;</span><br><span class="line">    &lt;li&gt;333&lt;/li&gt;</span><br><span class="line">	...</span><br><span class="line">    &lt;li&gt;nnn&lt;/li&gt;</span><br><span class="line">&lt;/ul&gt;</span><br><span class="line">其中li节点数量很大且可能动态变化。</span><br><span class="line">实现一个功能，当点击这些节点的时候，弹出li节点的坐标信息及节点内容。</span><br></pre></td></tr></table></figure>
+<p>看到这道题有点懵逼啊，坐标信息？网上找了一下，也没看到合适的案例，所以就暂时填了鼠标点击的坐标点，emmm~ 反正也是在li上嘛，如果有大佬知道还望不吝赐教~<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">var ul=document.getElementById(<span class="string">'myul'</span>);</span><br><span class="line">ul.addEventListener(<span class="string">'click'</span>,<span class="keyword">function</span>(e)&#123;</span><br><span class="line">    alert(<span class="string">'li的节点内容:'</span>+e.target.innerHTML+ <span class="string">'\nli的坐标信息:('</span>+e.clientX+<span class="string">','</span>+e.clientY+<span class="string">')'</span>);</span><br><span class="line">&#125;)</span><br></pre></td></tr></table></figure></p>
 
     </article>
     <!-- license  -->
@@ -354,13 +367,13 @@ height:50vh;
     <ul class="post-paginator">
         <li class="next">
             
-                <div class="nextSlogan">Next Post</div>
-                <a href= "/2018/05/02/div-center/" title= 让div在屏幕中居中 >
-                    <div class="nextTitle">让div在屏幕中居中</div>
-                </a>
-            
         </li>
         <li class="previous">
+            
+                <div class="prevSlogan">Previous Post</div>
+                <a href= "/2018/05/02/div-center/" title= 让div在屏幕中居中 >
+                    <div class="prevTitle">让div在屏幕中居中</div>
+                </a>
             
         </li>
     </ul>
@@ -467,7 +480,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#Quick-Start"><span class="toc-number">1.</span> <span class="toc-text">Quick Start</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#Create-a-new-post"><span class="toc-number">1.1.</span> <span class="toc-text">Create a new post</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Run-server"><span class="toc-number">1.2.</span> <span class="toc-text">Run server</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Generate-static-files"><span class="toc-number">1.3.</span> <span class="toc-text">Generate static files</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#Deploy-to-remote-sites"><span class="toc-number">1.4.</span> <span class="toc-text">Deploy to remote sites</span></a></li></ol></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#category-jQuery"><span class="toc-number">1.</span> <span class="toc-text">category: jQuery  </span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一、-什么是事件委托："><span class="toc-number">2.</span> <span class="toc-text">一、    什么是事件委托：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、jQuery的事件委托on、live、delegate及区别"><span class="toc-number">3.</span> <span class="toc-text">二、jQuery的事件委托on、live、delegate及区别</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、on（推荐）"><span class="toc-number">3.1.</span> <span class="toc-text">1、on（推荐）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、delegate"><span class="toc-number">3.2.</span> <span class="toc-text">2、delegate</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、live"><span class="toc-number">3.3.</span> <span class="toc-text">3、live</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、bind（当然这个只是事件绑定）"><span class="toc-number">3.4.</span> <span class="toc-text">4、bind（当然这个只是事件绑定）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、原生js的事件委托"><span class="toc-number">4.</span> <span class="toc-text">三、原生js的事件委托</span></a></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
