@@ -292,14 +292,12 @@
         <article class="index-post">
             <a class="abstract-title" href = "/2018/05/24/delegate/" >
                 
-                    <span>[Untitled Post]</span>
+                    <span>事件委托方法及区别</span>
             </a>
             <div class="abstract-content">
-                
-title: 事件委托方法及区别date: 2018-05-24 09:26:53tags: jQuery JavaScript
-category: jQuery  一、    什么是事件委托：事件委托，就是给父元素绑定事件监听，通过委托可以让底下的子元素都绑定上相应的事件。它的原理就是通过事件冒泡，利用父级去触发子级的事件。
+                一、    什么是事件委托：事件委托，就是给父元素绑定事件监听，通过委托可以让底下的子元素都绑定上相应的事件。它的原理就是通过事件冒泡，利用父级去触发子级的事件。
 为什么要进行事件委托呢？一般我们哪个元素需要事件，就绑定在哪个元素上，例如一个ul上的li，所有的li都需要绑定事件，当然不可能挨个给li绑定事件了，这个时候就需要事件委托了，将事件监听委托给父元素ul，监听指定的子元素li，匹配则触发事件
-二、jQuery的事...
+二、jQuery的事件委托on、live、delegate及区别1、on（推荐）语法：123$('父元素').on('事件名称','需要绑定事件的子元素',function()&#123;...
             </div>
             <div class="abstract-post-meta">
                 <!-- date  -->
@@ -307,6 +305,12 @@ category: jQuery  一、    什么是事件委托：事件委托，就是给父�
                     <span class="abstract-calander iconfont-archer">&#xe676;</span><span class="abstract-time">2018/05/24</span>
                 </div>
                 <!-- tags  -->
+                
+                <div class= abstract-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "jQuery JavaScript">jQuery JavaScript</a>
+    
+</div>
                 
             </div>
         </article>
@@ -475,8 +479,6 @@ More...
     
     
     
-    
-    
     <div class="total-archive"> Total : 3 </div>
     
     <div class="post-archive">
@@ -489,7 +491,7 @@ More...
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/24</span><a class="archive-post-title" href= "/2018/05/24/delegate/" >[Untitled Post]</a>
+            <span class="archive-post-date">05/24</span><a class="archive-post-title" href= "/2018/05/24/delegate/" >事件委托方法及区别</a>
         </li>
     
     
@@ -508,6 +510,8 @@ More...
     <div class="sidebar-tags-name">
     
         <span class="sidebar-tag-name" data-tags="css"><span class="iconfont-archer">&#xe606;</span>css</span>
+    
+        <span class="sidebar-tag-name" data-tags="jQuery JavaScript"><span class="iconfont-archer">&#xe606;</span>jQuery JavaScript</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
@@ -543,6 +547,8 @@ jsonContent:
     <div class="sidebar-categories-name">
     
         <span class="sidebar-category-name" data-categories="css"><span class="iconfont-archer">&#xe60a;</span>css</span>
+    
+        <span class="sidebar-category-name" data-categories="jQuery"><span class="iconfont-archer">&#xe60a;</span>jQuery</span>
     
     </div>
     <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>

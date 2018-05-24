@@ -15,7 +15,7 @@
     <meta name="description" content="">
     <meta name="Cache-Control" content="no-cache">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
-    <title>I‘m Loki</title>
+    <title>事件委托方法及区别 · I‘m Loki</title>
     <style type="text/css">
     @font-face {
         font-family: 'Oswald-Regular';
@@ -181,7 +181,7 @@
                 <a href="/" >I‘m Loki</a>
             </div>
             <div class="post-title">
-                <a href="#" class="post-name"></a>
+                <a href="#" class="post-name">事件委托方法及区别</a>
             </div>
     </div>
     
@@ -213,7 +213,7 @@ height:50vh;
         <h1 class="intro-title">
             <!-- 主页  -->
             
-            [Untitled Post]
+            事件委托方法及区别
             <!-- 404 -->
             
         </h1>
@@ -228,6 +228,12 @@ height:50vh;
         <!-- 文章页meta -->
         
             <!-- 文章页标签  -->
+            
+                <div class= post-intro-tags >
+    
+        <a class="post-tag" href="javascript:void(0);" data-tags = "jQuery JavaScript">jQuery JavaScript</a>
+    
+</div>
             
             <div class="post-intro-meta">
                 <span class="post-intro-calander iconfont-archer">&#xe676;</span>
@@ -337,9 +343,7 @@ height:50vh;
         <div class="container container-unloaded">
             <main class="main post-page">
     <article class="article-entry">
-        <hr>
-<p>title: 事件委托方法及区别<br>date: 2018-05-24 09:26:53<br>tags: jQuery JavaScript</p>
-<h2 id="category-jQuery"><a href="#category-jQuery" class="headerlink" title="category: jQuery  "></a>category: jQuery  </h2><h2 id="一、-什么是事件委托："><a href="#一、-什么是事件委托：" class="headerlink" title="一、    什么是事件委托："></a>一、    什么是事件委托：</h2><p>事件委托，就是给父元素绑定事件监听，通过委托可以让底下的子元素都绑定上相应的事件。它的原理就是通过事件冒泡，利用父级去触发子级的事件。</p>
+        <h2 id="一、-什么是事件委托："><a href="#一、-什么是事件委托：" class="headerlink" title="一、    什么是事件委托："></a>一、    什么是事件委托：</h2><p>事件委托，就是给父元素绑定事件监听，通过委托可以让底下的子元素都绑定上相应的事件。它的原理就是通过事件冒泡，利用父级去触发子级的事件。</p>
 <p>为什么要进行事件委托呢？<br>一般我们哪个元素需要事件，就绑定在哪个元素上，例如一个ul上的li，所有的li都需要绑定事件，当然不可能挨个给li绑定事件了，这个时候就需要事件委托了，将事件监听委托给父元素ul，监听指定的子元素li，匹配则触发事件</p>
 <h2 id="二、jQuery的事件委托on、live、delegate及区别"><a href="#二、jQuery的事件委托on、live、delegate及区别" class="headerlink" title="二、jQuery的事件委托on、live、delegate及区别"></a>二、jQuery的事件委托on、live、delegate及区别</h2><h3 id="1、on（推荐）"><a href="#1、on（推荐）" class="headerlink" title="1、on（推荐）"></a>1、on（推荐）</h3><p>语法：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'父元素'</span>).on(<span class="string">'事件名称'</span>,<span class="string">'需要绑定事件的子元素'</span>,<span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">	函数体;</span><br><span class="line">&#125;);</span><br></pre></td></tr></table></figure></p>
 <h3 id="2、delegate"><a href="#2、delegate" class="headerlink" title="2、delegate"></a>2、delegate</h3><p>语法：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">$(<span class="string">'父元素'</span>).delegate (<span class="string">'需要绑定事件的子元素'</span>,<span class="string">'事件名称'</span>, <span class="function"><span class="title">function</span></span>()&#123;</span><br><span class="line">	函数体;</span><br><span class="line">&#125;);</span><br><span class="line"></span><br><span class="line">等价于：$(<span class="string">'父元素'</span>).on( <span class="string">'事件名称'</span>,<span class="string">'子元素'</span>,<span class="function"><span class="title">function</span></span>()&#123;&#125; );</span><br></pre></td></tr></table></figure></p>
@@ -480,7 +484,7 @@ top:50vh;
         <div class="toc-catalog">
             <span class="iconfont-archer catalog-icon">&#xe613;</span><span>CATALOG</span>
         </div>
-        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#category-jQuery"><span class="toc-number">1.</span> <span class="toc-text">category: jQuery  </span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#一、-什么是事件委托："><span class="toc-number">2.</span> <span class="toc-text">一、    什么是事件委托：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、jQuery的事件委托on、live、delegate及区别"><span class="toc-number">3.</span> <span class="toc-text">二、jQuery的事件委托on、live、delegate及区别</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、on（推荐）"><span class="toc-number">3.1.</span> <span class="toc-text">1、on（推荐）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、delegate"><span class="toc-number">3.2.</span> <span class="toc-text">2、delegate</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、live"><span class="toc-number">3.3.</span> <span class="toc-text">3、live</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、bind（当然这个只是事件绑定）"><span class="toc-number">3.4.</span> <span class="toc-text">4、bind（当然这个只是事件绑定）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、原生js的事件委托"><span class="toc-number">4.</span> <span class="toc-text">三、原生js的事件委托</span></a></li></ol>
+        <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、-什么是事件委托："><span class="toc-number">1.</span> <span class="toc-text">一、    什么是事件委托：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、jQuery的事件委托on、live、delegate及区别"><span class="toc-number">2.</span> <span class="toc-text">二、jQuery的事件委托on、live、delegate及区别</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1、on（推荐）"><span class="toc-number">2.1.</span> <span class="toc-text">1、on（推荐）</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2、delegate"><span class="toc-number">2.2.</span> <span class="toc-text">2、delegate</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3、live"><span class="toc-number">2.3.</span> <span class="toc-text">3、live</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4、bind（当然这个只是事件绑定）"><span class="toc-number">2.4.</span> <span class="toc-text">4、bind（当然这个只是事件绑定）</span></a></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、原生js的事件委托"><span class="toc-number">3.</span> <span class="toc-text">三、原生js的事件委托</span></a></li></ol>
     </div>
     
     <div class="back-top iconfont-archer">&#xe639;</div>
@@ -518,8 +522,6 @@ top:50vh;
     
     
     
-    
-    
     <div class="total-archive"> Total : 3 </div>
     
     <div class="post-archive">
@@ -532,7 +534,7 @@ top:50vh;
     
     
         <li class="archive-post-item">
-            <span class="archive-post-date">05/24</span><a class="archive-post-title" href= "/2018/05/24/delegate/" >[Untitled Post]</a>
+            <span class="archive-post-date">05/24</span><a class="archive-post-title" href= "/2018/05/24/delegate/" >事件委托方法及区别</a>
         </li>
     
     
@@ -551,6 +553,8 @@ top:50vh;
     <div class="sidebar-tags-name">
     
         <span class="sidebar-tag-name" data-tags="css"><span class="iconfont-archer">&#xe606;</span>css</span>
+    
+        <span class="sidebar-tag-name" data-tags="jQuery JavaScript"><span class="iconfont-archer">&#xe606;</span>jQuery JavaScript</span>
     
     </div>
     <div class="iconfont-archer sidebar-tags-empty">&#xe678;</div>
@@ -586,6 +590,8 @@ jsonContent:
     <div class="sidebar-categories-name">
     
         <span class="sidebar-category-name" data-categories="css"><span class="iconfont-archer">&#xe60a;</span>css</span>
+    
+        <span class="sidebar-category-name" data-categories="jQuery"><span class="iconfont-archer">&#xe60a;</span>jQuery</span>
     
     </div>
     <div class="iconfont-archer sidebar-categories-empty">&#xe678;</div>
